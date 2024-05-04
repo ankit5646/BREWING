@@ -4,7 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Our Services - Tech for Mental Wellness</title>
-    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        
+        .service-card:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+
+        .service-card:hover img {
+            filter: brightness(70%);
+        }
+
+        .service-card-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-card-content {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <header class="bg-gray-900 text-white py-4">
@@ -33,26 +75,36 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Our Services</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Service Title 1</h3>
-                    <p class="text-gray-700 mb-4">Description of Service 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1: Music Gallery -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="music_gallery.jpg" alt="Music Gallery">
+                    <div class="service-card-content">
+                        <h3 class="text-xl font-semibold mb-4">Music Gallery</h3>
+                        <p class="text-gray-100">Explore curated playlists and soothing sounds to uplift your mood and calm your mind.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold mt-2">Learn More</a>
+                    </div>
                 </div>
-                <!-- Service Card 2 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Service Title 2</h3>
-                    <p class="text-gray-700 mb-4">Description of Service 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+                
+                <!-- Service Card 2: Anonymous Video Chat Room -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="anonymous_chat.jpg" alt="Anonymous Video Chat Room">
+                    <div class="service-card-content">
+                        <h3 class="text-xl font-semibold mb-4">Anonymous Video Chat Room</h3>
+                        <p class="text-gray-100">Connect with others anonymously through video chats to share experiences and provide support.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold mt-2">Learn More</a>
+                    </div>
                 </div>
-                <!-- Service Card 3 -->
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Service Title 3</h3>
-                    <p class="text-gray-700 mb-4">Description of Service 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">Learn More</a>
+                
+                <!-- Service Card 3: Socializing Trip -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://imgs.search.brave.com/V7pMfpnJr4EwVkK-GStuAV-08Ki-dA10eoZzf9oIZgM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEwL2I1/L2IwLzEwYjViMGM5/NWI3NzcxMTQzZTI5/ZjhmZDE1Yjc5Y2Q2/LmpwZw" alt="Socializing Trip">
+                    <div class="service-card-content">
+                        <h3 class="text-xl font-semibold mb-4">Socializing Trip</h3>
+                        <p class="text-gray-100">Join group trips and outdoor activities to meet new people and build supportive connections.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold mt-2">Learn More</a>
+                    </div>
                 </div>
-                <!-- Add more service cards as needed -->
             </div>
         </div>
     </section>
@@ -64,4 +116,12 @@
                 <ul class="flex space-x-4">
                     <li><a href="#" class="hover:text-gray-300">Home</a></li>
                     <li><a href="#" class="hover:text-gray-300">About Us</a></li>
-                    <li><a href="#" class="hover:text-gray
+                    <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Blog</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
